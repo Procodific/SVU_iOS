@@ -8,11 +8,13 @@
 
 import UIKit
 
-class EntradaBitacoraViewController: UIViewController {
+class EntradaBitacoraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var incidente: UITextField!
     @IBOutlet weak var lugar: UITextField!
     @IBOutlet weak var descripcion: UITextView!
+    
+    var addEntradaFunc:((incidente:String, lugar:String)->())!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,26 +27,19 @@ class EntradaBitacoraViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "entrada_bitacora" {
-            
-            let str_incidente = incidente.text
-            let str_lugar = lugar.text
-            let str_descripcion = descripcion.text
-            
-            if str_incidente?.isEmpty == false && str_lugar?.isEmpty == false && str_descripcion?.isEmpty == false {
-                print("agregadno")
-                let destinationController = segue.destinationViewController as!BitacoraTableViewController
-                
-                destinationController.incidentes.append("\(str_incidente), \(str_lugar)")
-                print(destinationController.incidentes.count)
-            }
-            else {
-                
-            }
-        }
+    @IBAction func addEntrada(sender: AnyObject) {
+        addEntradaFunc(incidente: incidente.text!, lugar: lugar.text!)
+        self.dismissViewControllerAnimated(false, completion: nil)
     }
-
+    
+    @IBAction func photoButtonClicked(sender: AnyObject) {
+        let photoPicker = UIImagePickerController()
+        photoPicker.delegate = self
+        photoPicker.sourceType = .PhotoLibrary
+        self.presentViewController(photoPicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        //
+    }
 }

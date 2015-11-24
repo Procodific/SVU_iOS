@@ -73,17 +73,25 @@
 				8C183B491BCB7D6A00D4A620 /* AppDelegate.swift */,
 				8C183B4B1BCB7D6A00D4A620 /* AlumnoViewController.swift */,
 				8C183B4D1BCB7D6A00D4A620 /* Main.storyboard */,
-				8C6F950B1BDD64410053C3CF /* EntradaBitacoraViewController.swift */,
 				8C6F95091BDD60950053C3CF /* AlumnoUITabBarController.swift */,
-				8C6F95071BDD4F8D0053C3CF /* GuardiaViewController.swift */,
-				8C6F95031BDD37A20053C3CF /* CameraViewController.swift */,
-				8C6F95011BDD2E8F0053C3CF /* BitacoraTableViewController.swift */,
-				8C6F94FF1BDD25860053C3CF /* CamerasCollectionViewController.swift */,
+				8C93EB841C043E2A00D37912 /* Guardia */,
 				8C183B501BCB7D6A00D4A620 /* Assets.xcassets */,
 				8C183B521BCB7D6A00D4A620 /* LaunchScreen.storyboard */,
 				8C183B551BCB7D6A00D4A620 /* Info.plist */,
 			);
 			path = SVU;
+			sourceTree = "<group>";
+		};
+		8C93EB841C043E2A00D37912 /* Guardia */ = {
+			isa = PBXGroup;
+			children = (
+				8C6F950B1BDD64410053C3CF /* EntradaBitacoraViewController.swift */,
+				8C6F95071BDD4F8D0053C3CF /* GuardiaViewController.swift */,
+				8C6F95031BDD37A20053C3CF /* CameraViewController.swift */,
+				8C6F95011BDD2E8F0053C3CF /* BitacoraTableViewController.swift */,
+				8C6F94FF1BDD25860053C3CF /* CamerasCollectionViewController.swift */,
+			);
+			name = Guardia;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
