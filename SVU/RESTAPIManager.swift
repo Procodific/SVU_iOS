@@ -14,7 +14,7 @@ class RestApiManager: NSObject {
     static let sharedInstance = RestApiManager()
     
     let baseURL = "http://api.randomuser.me/"
-    let reportesURL = "http://192.168.1.71:8000/SISU/1/reportes"
+    let reportesURL = "http://192.168.43.102:8000/SISU/1/reportes"
     
     func getRandomUser(onCompletion: (JSON) -> Void) {
         let route = baseURL
