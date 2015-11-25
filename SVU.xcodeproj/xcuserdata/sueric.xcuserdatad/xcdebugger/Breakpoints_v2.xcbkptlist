@@ -2,4 +2,70 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SVU/RESTAPIManager.swift"
+            timestampString = "470124454.896082"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "addReporte(_:tipo:descripcion:imagen:onCompletion:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SVU.RestApiManager.addReporte (SVU.RestApiManager)(Swift.String, tipo : Swift.String, descripcion : Swift.String, imagen : Swift.String, onCompletion : (SVU.JSON) -&gt; ()) -&gt; ()"
+                  moduleName = "SVU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sueric/Documents/GitHub/SVU/SVU/RESTAPIManager.swift"
+                  timestampString = "470125848.042666"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "676">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SVU.RestApiManager.(addReporte (SVU.RestApiManager) -&gt; (Swift.String, tipo : Swift.String, descripcion : Swift.String, imagen : Swift.String, onCompletion : (SVU.JSON) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "SVU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sueric/Documents/GitHub/SVU/SVU/RESTAPIManager.swift"
+                  timestampString = "470125848.043078"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "140">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SVU/RESTAPIManager.swift"
+            timestampString = "470124465.283948"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "makeHTTPPostRequest(_:data:onCompletion:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -28,8 +28,10 @@ class EntradaBitacoraViewController: UIViewController, UIImagePickerControllerDe
     }
     
     @IBAction func addEntrada(sender: AnyObject) {
-        addEntradaFunc(incidente: incidente.text!, lugar: lugar.text!)
-        self.dismissViewControllerAnimated(false, completion: nil)
+        RestApiManager.sharedInstance.addReporte(incidente.text!, tipo: "1", descripcion: descripcion.text!, imagen: "imagen", onCompletion: {
+            json in
+            self.dismissViewControllerAnimated(false, completion: nil)
+        })
     }
     
     @IBAction func photoButtonClicked(sender: AnyObject) {

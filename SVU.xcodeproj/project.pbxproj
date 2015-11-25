@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C0D20A71C046D1900ED3FFB /* RESTAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0D20A61C046D1900ED3FFB /* RESTAPIManager.swift */; };
+		8C0D20B01C046F4400ED3FFB /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0D20AE1C046EF900ED3FFB /* SwiftyJSON.swift */; };
 		8C183B4A1BCB7D6A00D4A620 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C183B491BCB7D6A00D4A620 /* AppDelegate.swift */; };
 		8C183B4C1BCB7D6A00D4A620 /* AlumnoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C183B4B1BCB7D6A00D4A620 /* AlumnoViewController.swift */; };
 		8C183B4F1BCB7D6A00D4A620 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C183B4D1BCB7D6A00D4A620 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C0D20A61C046D1900ED3FFB /* RESTAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTAPIManager.swift; sourceTree = "<group>"; };
+		8C0D20AE1C046EF900ED3FFB /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = "../../../../Downloads/SwiftyJSON-master/Source/SwiftyJSON.swift"; sourceTree = "<group>"; };
 		8C183B461BCB7D6A00D4A620 /* SVU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SVU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C183B491BCB7D6A00D4A620 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C183B4B1BCB7D6A00D4A620 /* AlumnoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlumnoViewController.swift; sourceTree = "<group>"; };
@@ -70,10 +74,12 @@
 		8C183B481BCB7D6A00D4A620 /* SVU */ = {
 			isa = PBXGroup;
 			children = (
+				8C0D20AE1C046EF900ED3FFB /* SwiftyJSON.swift */,
 				8C183B491BCB7D6A00D4A620 /* AppDelegate.swift */,
 				8C183B4B1BCB7D6A00D4A620 /* AlumnoViewController.swift */,
 				8C183B4D1BCB7D6A00D4A620 /* Main.storyboard */,
 				8C6F95091BDD60950053C3CF /* AlumnoUITabBarController.swift */,
+				8C0D20A61C046D1900ED3FFB /* RESTAPIManager.swift */,
 				8C93EB841C043E2A00D37912 /* Guardia */,
 				8C183B501BCB7D6A00D4A620 /* Assets.xcassets */,
 				8C183B521BCB7D6A00D4A620 /* LaunchScreen.storyboard */,
@@ -165,8 +171,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C0D20B01C046F4400ED3FFB /* SwiftyJSON.swift in Sources */,
 				8C6F95021BDD2E8F0053C3CF /* BitacoraTableViewController.swift in Sources */,
 				8C6F950C1BDD64410053C3CF /* EntradaBitacoraViewController.swift in Sources */,
+				8C0D20A71C046D1900ED3FFB /* RESTAPIManager.swift in Sources */,
 				8C6F95041BDD37A20053C3CF /* CameraViewController.swift in Sources */,
 				8C6F95001BDD25860053C3CF /* CamerasCollectionViewController.swift in Sources */,
 				8C183B4C1BCB7D6A00D4A620 /* AlumnoViewController.swift in Sources */,

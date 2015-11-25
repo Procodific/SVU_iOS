@@ -16,6 +16,7 @@ class BitacoraTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        self.getReportes()
         self.tableView.reloadData()
     }
 
@@ -61,5 +62,29 @@ class BitacoraTableViewController: UITableViewController {
     
     func appendData(incidente: String, lugar: String) {
         self.incidentes.append("\(incidente), \(lugar)");
+    }
+    
+    func getReportes() {
+        RestApiManager.sharedInstance.getReportes { json in
+            var arreglo = [String!]()
+            
+            for (index, object) in json {
+                arreglo.append("\(object["nombre"].stringValue)")
+            }
+            
+            self.incidentes = arreglo
+            
+            self.tableView.reloadData()
+            
+            /*
+            for (index: String, subJson: JSON) in results {
+                let user: AnyObject = subJson["user"].object
+                self.items.addObject(user)
+                dispatch_async(dispatch_get_main_queue(),{
+                    tableView?.reloadData()
+                })
+            }
+            */
+        }
     }
 }
