@@ -74,17 +74,9 @@ class BitacoraTableViewController: UITableViewController {
             
             self.incidentes = arreglo
             
-            self.tableView.reloadData()
-            
-            /*
-            for (index: String, subJson: JSON) in results {
-                let user: AnyObject = subJson["user"].object
-                self.items.addObject(user)
-                dispatch_async(dispatch_get_main_queue(),{
-                    tableView?.reloadData()
-                })
+            dispatch_async(dispatch_get_main_queue()) {
+                self.tableView.reloadData()
             }
-            */
         }
     }
 }
