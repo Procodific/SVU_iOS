@@ -31,7 +31,7 @@ class EntradaBitacoraViewController: UIViewController, UIImagePickerControllerDe
         RestApiManager.sharedInstance.addReporte(incidente.text!, tipo: "1", descripcion: descripcion.text!, imagen: "imagen", onCompletion: {
             json in
             dispatch_async(dispatch_get_main_queue()) {
-                self.navigationController?.popViewControllerAnimated(false)
+                self.navigationController?.popViewControllerAnimated(true)
             }
         })
     }
