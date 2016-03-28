@@ -21,9 +21,12 @@
 		8C6F95081BDD4F8D0053C3CF /* GuardiaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F95071BDD4F8D0053C3CF /* GuardiaViewController.swift */; };
 		8C6F950A1BDD60950053C3CF /* AlumnoUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F95091BDD60950053C3CF /* AlumnoUITabBarController.swift */; };
 		8C6F950C1BDD64410053C3CF /* EntradaBitacoraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F950B1BDD64410053C3CF /* EntradaBitacoraViewController.swift */; };
+		8CD9896E1C0C76F9000B6A44 /* EntradaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD9896D1C0C76F9000B6A44 /* EntradaViewController.swift */; };
+		E75EF5AB354B98D21536CCE8 /* Pods_SVU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5360D3BF44D0964D6246769E /* Pods_SVU.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5360D3BF44D0964D6246769E /* Pods_SVU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SVU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C0D20A61C046D1900ED3FFB /* RESTAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTAPIManager.swift; sourceTree = "<group>"; };
 		8C0D20AE1C046EF900ED3FFB /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = "../../../../Downloads/SwiftyJSON-master/Source/SwiftyJSON.swift"; sourceTree = "<group>"; };
 		8C183B461BCB7D6A00D4A620 /* SVU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SVU.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +43,9 @@
 		8C6F95071BDD4F8D0053C3CF /* GuardiaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuardiaViewController.swift; sourceTree = "<group>"; };
 		8C6F95091BDD60950053C3CF /* AlumnoUITabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlumnoUITabBarController.swift; sourceTree = "<group>"; };
 		8C6F950B1BDD64410053C3CF /* EntradaBitacoraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntradaBitacoraViewController.swift; sourceTree = "<group>"; };
+		8CD9896D1C0C76F9000B6A44 /* EntradaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntradaViewController.swift; sourceTree = "<group>"; };
+		DD0AD1AF2AF4AD703AD7AF01 /* Pods-SVU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SVU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SVU/Pods-SVU.debug.xcconfig"; sourceTree = "<group>"; };
+		E4AEAC1F6A2BE084DB97B060 /* Pods-SVU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SVU.release.xcconfig"; path = "Pods/Target Support Files/Pods-SVU/Pods-SVU.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,18 +54,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C183B5C1BCB99C000D4A620 /* MapKit.framework in Frameworks */,
+				E75EF5AB354B98D21536CCE8 /* Pods_SVU.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02B939F8EFC0D104D73A9804 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD0AD1AF2AF4AD703AD7AF01 /* Pods-SVU.debug.xcconfig */,
+				E4AEAC1F6A2BE084DB97B060 /* Pods-SVU.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8C183B3D1BCB7D6A00D4A620 = {
 			isa = PBXGroup;
 			children = (
 				8C183B5B1BCB99C000D4A620 /* MapKit.framework */,
 				8C183B481BCB7D6A00D4A620 /* SVU */,
 				8C183B471BCB7D6A00D4A620 /* Products */,
+				02B939F8EFC0D104D73A9804 /* Pods */,
+				D599FDB228FCCBC4165A10CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +96,7 @@
 				8C183B491BCB7D6A00D4A620 /* AppDelegate.swift */,
 				8C183B4B1BCB7D6A00D4A620 /* AlumnoViewController.swift */,
 				8C183B4D1BCB7D6A00D4A620 /* Main.storyboard */,
+				8CD9896D1C0C76F9000B6A44 /* EntradaViewController.swift */,
 				8C6F95091BDD60950053C3CF /* AlumnoUITabBarController.swift */,
 				8C0D20A61C046D1900ED3FFB /* RESTAPIManager.swift */,
 				8C93EB841C043E2A00D37912 /* Guardia */,
@@ -100,6 +119,14 @@
 			name = Guardia;
 			sourceTree = "<group>";
 		};
+		D599FDB228FCCBC4165A10CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5360D3BF44D0964D6246769E /* Pods_SVU.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,9 +134,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C183B581BCB7D6A00D4A620 /* Build configuration list for PBXNativeTarget "SVU" */;
 			buildPhases = (
+				3E31CAC96B2ABD1D55D1CBF2 /* Check Pods Manifest.lock */,
 				8C183B421BCB7D6A00D4A620 /* Sources */,
 				8C183B431BCB7D6A00D4A620 /* Frameworks */,
 				8C183B441BCB7D6A00D4A620 /* Resources */,
+				537BC0DF0FFCFAECBBF2515C /* Embed Pods Frameworks */,
+				DE6D1ED86FDBC44FA75BD431 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -166,6 +196,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E31CAC96B2ABD1D55D1CBF2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		537BC0DF0FFCFAECBBF2515C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SVU/Pods-SVU-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE6D1ED86FDBC44FA75BD431 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SVU/Pods-SVU-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8C183B421BCB7D6A00D4A620 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -178,6 +256,7 @@
 				8C6F95041BDD37A20053C3CF /* CameraViewController.swift in Sources */,
 				8C6F95001BDD25860053C3CF /* CamerasCollectionViewController.swift in Sources */,
 				8C183B4C1BCB7D6A00D4A620 /* AlumnoViewController.swift in Sources */,
+				8CD9896E1C0C76F9000B6A44 /* EntradaViewController.swift in Sources */,
 				8C6F95081BDD4F8D0053C3CF /* GuardiaViewController.swift in Sources */,
 				8C183B4A1BCB7D6A00D4A620 /* AppDelegate.swift in Sources */,
 				8C6F950A1BDD60950053C3CF /* AlumnoUITabBarController.swift in Sources */,
@@ -228,6 +307,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -242,7 +322,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -273,6 +355,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -281,7 +364,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -291,6 +376,7 @@
 		};
 		8C183B591BCB7D6A00D4A620 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD0AD1AF2AF4AD703AD7AF01 /* Pods-SVU.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -305,6 +391,7 @@
 		};
 		8C183B5A1BCB7D6A00D4A620 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4AEAC1F6A2BE084DB97B060 /* Pods-SVU.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

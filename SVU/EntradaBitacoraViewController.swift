@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EZLoadingActivity
 
 class EntradaBitacoraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -28,11 +29,38 @@ class EntradaBitacoraViewController: UIViewController, UIImagePickerControllerDe
     }
     
     @IBAction func addEntrada(sender: AnyObject) {
-        RestApiManager.sharedInstance.addReporte(incidente.text!, tipo: "1", descripcion: descripcion.text!, imagen: "imagen", onCompletion: {
-            json in
-            dispatch_async(dispatch_get_main_queue()) {
-                self.navigationController?.popViewControllerAnimated(true)
+        let str_incidente = incidente.text
+        let str_lugar = lugar.text
+        let str_descripcion = descripcion.text
+        
+        EZLoadingActivity.Settings.SuccessText = "Guardado"
+        EZLoadingActivity.Settings.FailText = "Error"
+        EZLoadingActivity.show("Subiendo...", disableUI: false)
+        
+        var error_campos = false
+        
+        let backgroundQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)
+        dispatch_async(backgroundQueue, {
+            if str_incidente?.isEmpty == true || str_lugar?.isEmpty == true || str_descripcion.isEmpty == true {
+                error_campos = true
             }
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                if error_campos == false {
+                    RestApiManager.sharedInstance.addReporte(self.incidente.text!, tipo: "1", descripcion: self.descripcion.text!, imagen: "imagen", onCompletion: {
+                        json in
+                        dispatch_async(dispatch_get_main_queue()) {
+                            EZLoadingActivity.hide(success: true, animated: true)
+                            self.navigationController?.popViewControllerAnimated(true)
+                        }
+                    })
+                }
+                else {
+                    EZLoadingActivity.hide(success: false, animated: true)
+                    let alert = UIAlertController(title: nil, message: "Ingrese todos los campos", preferredStyle: UIAlertControllerStyle.Alert)
+                    self.presentViewController(alert, animated: true, completion: nil)
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }
+            })
         })
     }
     

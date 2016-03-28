@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EZLoadingActivity
 
 class BitacoraTableViewController: UITableViewController {
     var incidentes = [String!]()
@@ -17,7 +18,6 @@ class BitacoraTableViewController: UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         self.getReportes()
-        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,11 +60,20 @@ class BitacoraTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        }
+    
     func appendData(incidente: String, lugar: String) {
         self.incidentes.append("\(incidente), \(lugar)");
     }
     
     func getReportes() {
+        
+        EZLoadingActivity.Settings.SuccessText = "Listo"
+        EZLoadingActivity.Settings.FailText = "Error"
+        EZLoadingActivity.show("Cargando...", disableUI: false)
+        
         RestApiManager.sharedInstance.getReportes { json in
             var arreglo = [String!]()
             
@@ -75,7 +84,8 @@ class BitacoraTableViewController: UITableViewController {
             self.incidentes = arreglo
             
             dispatch_async(dispatch_get_main_queue()) {
-                self.tableView.reloadData()
+                EZLoadingActivity.hide(success: true, animated: true)
+                self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Automatic)
             }
         }
     }

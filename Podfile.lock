@@ -1,0 +1,19 @@
+PODS:
+  - CarbonKit (2.0.0)
+  - EZLoadingActivity (0.4)
+  - SwiftLoader (0.2.5)
+  - VideoSplash (1.0.9)
+
+DEPENDENCIES:
+  - CarbonKit
+  - EZLoadingActivity
+  - SwiftLoader
+  - VideoSplash
+
+SPEC CHECKSUMS:
+  CarbonKit: 84bfdb4d100531b656fd7db1714d17fb1b903a5b
+  EZLoadingActivity: d6fe822f4b295349dd44e6e5d7f22d7c1a2b13cc
+  SwiftLoader: 12d7a6f661f5e9a2c9a72003e7dd6162f4ff0cc4
+  VideoSplash: b862d41726b22fefd47ffe845c0524616cf5ab0e
+
+COCOAPODS: 0.39.0
